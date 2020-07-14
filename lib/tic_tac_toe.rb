@@ -113,6 +113,13 @@ def winner(board)
 end
 
 def play(board)
-  input = turn(board)
-  over?(board)
+  until over?(board)
+    turn(board)
+  end
+  
+  if won?(board)
+    winner(board)
+  elsif draw?(board)
+    puts "It's a draw"
+  end
 end
