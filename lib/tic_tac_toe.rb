@@ -114,4 +114,5 @@ end
 
 def play(board)
   input = turn(board)
+  over?(board)
 end
